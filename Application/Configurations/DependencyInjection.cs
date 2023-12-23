@@ -1,18 +1,12 @@
 ﻿using Application.Services;
 using Application.Services.Interfaces;
-using CRISPR.PdfGenerator;
-using Domain.Helpers;
 using Domain.Models;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
-using NuGet.Protocol.Plugins;
-using System.Text;
 
 namespace Application.Configurations
 {
@@ -54,7 +48,7 @@ namespace Application.Configurations
             services.AddScoped<IDataSetService, DataSetService>();
             services.AddScoped<IModelRepository, ModelRepository>();
             services.AddScoped<IDataSetRepository, DataSetRepository>();
-            services.AddScoped(typeof(IPdfGenerator<>), typeof(PdfGenerator<>));
+            //services.AddScoped(typeof(IPdfGenerator<>), typeof(PdfGenerator<>));
 
             #endregion
 
