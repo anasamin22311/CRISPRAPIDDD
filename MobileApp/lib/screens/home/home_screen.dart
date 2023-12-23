@@ -1,9 +1,9 @@
-import "package:crispr/screens/home/layouts/models.dart";
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "layouts/about_us.dart";
 import "layouts/home_layout.dart";
 import "layouts/upload_seq.dart";
+import "layouts/models.dart";
 import "layouts/props.dart";
 class HomeScreen extends StatelessWidget{
   const HomeScreen({super.key});
