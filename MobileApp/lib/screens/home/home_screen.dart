@@ -3,6 +3,8 @@ import "package:flutter/material.dart";
 import "layouts/about_us.dart";
 import "layouts/home_layout.dart";
 import "layouts/upload_seq.dart";
+import "layouts/models.dart";
+import "layouts/props.dart";
 class HomeScreen extends StatelessWidget{
   const HomeScreen({super.key});
   @override
@@ -56,12 +58,8 @@ class HomeScreen extends StatelessWidget{
     ),
     body: Column(
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: buildAboutUs(context)
-        ),
-        Spacer(),
-        Divider(height: 0.0,),
+        buildProps(context),
+        const Divider(height: 0.0),
         Container(
           padding: EdgeInsets.only(left:30.0),
           alignment:Alignment.centerLeft,
