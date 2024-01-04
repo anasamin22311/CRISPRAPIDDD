@@ -1,9 +1,10 @@
 import "package:flutter/material.dart";
 import "package:flutter/gestures.dart";
 import "package:url_launcher/url_launcher.dart";
-Padding buildHome(final BuildContext context)
+import "../../../shared/cubit/cubit.dart";
+Padding buildHome(final BuildContext context,final AppCubit cubit)
 => Padding(
-  padding: EdgeInsets.all(8.0),
+  padding: const EdgeInsets.all(8.0),
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[

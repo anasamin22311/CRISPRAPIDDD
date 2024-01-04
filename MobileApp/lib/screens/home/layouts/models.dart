@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../shared/components.dart';
-Expanded buildModels(final BuildContext context)
+import '../../../shared/cubit/cubit.dart';
+Expanded buildModels(final BuildContext context, final AppCubit cubit)
 => Expanded(
   child: ListView(
     physics: BouncingScrollPhysics(),

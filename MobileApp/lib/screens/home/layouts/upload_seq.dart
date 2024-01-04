@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../shared/components.dart';
-Expanded buildUpload(final BuildContext context)
+import '../../../shared/cubit/cubit.dart';
+Expanded buildUpload(final BuildContext context, final AppCubit cubit)
 => Expanded(
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -16,8 +17,8 @@ Expanded buildUpload(final BuildContext context)
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:<Widget>[
-              Text("Paste your DNA sequence:"),
-              Padding(
+              const Text("Paste your DNA sequence:"),
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical:8.0),
                 child: TextField(
                   maxLines: 5,
@@ -26,7 +27,7 @@ Expanded buildUpload(final BuildContext context)
                   ),
                 ),
               ),
-              Text("\nOr upload a CSV or FASTA file:"),
+              const Text("\nOr upload a CSV or FASTA file:"),
               Row(
                 children: <Widget>[
                   MaterialButton(
@@ -38,7 +39,7 @@ Expanded buildUpload(final BuildContext context)
                       borderRadius: BorderRadius.circular(2.0),
                       side: BorderSide()
                     ),
-                    child: Text("Choose File"),
+                    child: const Text("Choose File"),
                   ),
                   Text("   No file chosen")
                 ],

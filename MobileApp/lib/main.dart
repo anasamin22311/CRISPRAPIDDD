@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import "screens/home/home_screen.dart";
+import "shared/network/remote/dio_helper.dart";
 void main(){
+  DioHelper.init();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget{
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget{
     ),
     initialRoute: "home",
     routes: <String,StatelessWidget Function(BuildContext)>{
-      "home": (final BuildContext context)=>const HomeScreen()
+      "home": (final BuildContext context)=>HomeScreen()
     },
   );
 }
